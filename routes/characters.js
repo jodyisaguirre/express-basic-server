@@ -6,18 +6,18 @@ const characters = require('../data.json')
 
 // GET all route
 // Send back all characters, with a root key of 'characters'
-const kenx =require('../db/connection')
-router.get('/',  (req,res) =>{
-  knex('character')
-    .then(characters => {
-       res.json({ characters: characters })
+// const kenx =require('../db/connection')
+// router.get('/',  (req,res) =>{
+//   knex('character')
+//     .then(characters => {
+//        res.json({ characters: characters })
+//
+//     })
+//   )}
 
-    })
-  )}
-
-// router.get('/', (req, res) => {
-//   res.json({ characters: characters })
-// })
+router.get('/', (req, res) => {
+  res.json({ characters: characters })
+})
 
 // GET one route
 // Sends back a single character from the data
