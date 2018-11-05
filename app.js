@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 4000
 
 
 // Route imports
@@ -34,7 +34,7 @@ app.use(errorHandler)
 
 
 function notFound(req, res, next) {
-  res.status(404).send({ error: 'Not found!', status: 404, url: req.originalUrl })
+  res.status(404).send({ error: 'Not Today ISIS!', status: 404, url: req.originalUrl })
 }
 
 // eslint-disable-next-line
